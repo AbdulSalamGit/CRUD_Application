@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block body %}
+   
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center mb-4">Create Student</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <!-- First Name -->
+                    <div class="mb-3">
+                        <label for="first_name" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name">
+                    </div>
+                    
+                    <!-- Last Name -->
+                    <div class="mb-3">
+                        <label for="last_name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="last_name" name="last_name">
+                    </div>
+                    
+                    <!-- Class Name -->
+                    <div class="mb-3">
+                        <label for="class_name" class="form-label">Class Name</label>
+                        <input type="text" class="form-control" id="class_name" name="class_name">
+                    </div>
+                    
+                    <!-- Age -->
+                    <div class="mb-3">
+                        <label for="age" class="form-label">Age</label>
+                        <input type="number" class="form-control" id="age" name="age">
+                    </div>
+                    
+                    <!-- Grade -->
+                    <div class="mb-3">
+                        <label for="grade" class="form-label">Grade</label>
+                        <input type="text" class="form-control" id="grade" name="grade">
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Create Student</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

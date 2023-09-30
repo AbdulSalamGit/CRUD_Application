@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block body %}
+   
+    <div class="container">
+        <h1 class="text-center mt-4">Student List</h1>
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Student ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Class Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                <tr>
+                    <td>{{ student.id }}</td>
+                    <td>{{ student.first_name }}</td>
+                    <td>{{ student.last_name }}</td>
+                    <td>{{ student.class_name }}</td>
+                    <td>{{ student.age }}</td>
+                    <td>{{ student.grade }}</td>
+                    <th><a href="{% url 'delete_student' student.id %}" class="btn btn-danger" onclick="return confirm('Are you sure to delete');">Delete</a></th>
+                    <th><a href="{% url 'update_student' student.id %}" class="btn btn-primary">Update</a></th>
+
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="5">No students available.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    
+    {% endblock %}
+   

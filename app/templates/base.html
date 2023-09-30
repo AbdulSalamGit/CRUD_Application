@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Student Management system</title>
+  </head>
+  <body>
+
+    {% include 'index.html' %}
+    {% block body%}
+   
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1>Welcome to Our School</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et massa sit amet velit aliquet gravida. Our school is dedicated to providing quality education and fostering a nurturing environment for students of all ages.</p>
+            <p>Our experienced faculty members are committed to helping students reach their full potential, both academically and personally. With a wide range of programs and extracurricular activities, we offer a well-rounded educational experience.</p>
+            <p>Explore our website to learn more about our curriculum, admission process, and the exciting opportunities that await your child at our school. We look forward to partnering with you on your educational journey.</p>
+                <a href="{% url 'view_student' %}" class="btn btn-primary">View Students</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'image/school_image.jpg' %}" alt="School Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-4">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in metus sed ligula iaculis egestas.</p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Contact Us</h2>
+                <p>Email: info@ourschool.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Our Programs</h2>
+                <ul>
+                    <li>BBA</li>
+                    <li>Computer Science</li>
+                    <li>Commerce</li>
+                    <li>English</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+   
+    {%include 'footer.html'%}
+    {% endblock %}
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+   
+  </body>
+</html>
